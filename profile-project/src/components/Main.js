@@ -5,8 +5,8 @@ import LogoComponent from '../subComponents/LogoComponent';
 import PowerButton from '../subComponents/PowerButton';
 import SocialIcons from '../subComponents/SocialIcons';
 import { YinYang } from '../components/AllSvgs';
-
-
+import Intro from './Intro';
+import {motion} from 'framer-motion'
 
 
 const Main = () => {
@@ -32,39 +32,59 @@ const Main = () => {
 
 
         <Contact target="_blank" to={{ pathname:"mailto:afaraitsulaimon@gmail.com" }}>
-           <h3>
+           <motion.h2
+              whileHover={{ scale:1.1 }}
+              whileTap={{ scale: 0.9 }}
+           
+           >
               Say Hi....
-           </h3>
+           </motion.h2>
         </Contact>
 
         <BLOG to="/blog">
-          <h3>
+        <motion.h2
+              whileHover={{ scale:1.1 }}
+              whileTap={{ scale: 0.9 }}
+           
+           >
               Blog
-           </h3>
+              </motion.h2>
         </BLOG>
 
         <WORK to="/work" click={click}>
-          <h3>
+        <motion.h2
+              whileHover={{ scale:1.1 }}
+              whileTap={{ scale: 0.9 }}
+           
+           >
               Work
-           </h3>
+              </motion.h2>
         </WORK>
 
         <BottomBar>
               <ABOUT to="/about" click={click}>
-                  <h2>
+              <motion.h2
+              whileHover={{ scale:1.1 }}
+              whileTap={{ scale: 0.9 }}
+           
+                >
                       About.
-                  </h2>
+                      </motion.h2>
               </ABOUT>
 
               <SKILLS to="/skills">
-                  <h2>
+              <motion.h2
+              whileHover={{ scale:1.1 }}
+              whileTap={{ scale: 0.9 }}
+           
+                >
                       Skills.
-                  </h2>
+                      </motion.h2>
               </SKILLS>
         </BottomBar>
 
       </Container>
-      
+      {click ? <Intro click={click} /> : null}
     </MainContainer>
   )
 }
