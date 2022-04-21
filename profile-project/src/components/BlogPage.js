@@ -7,6 +7,7 @@ import SocialIcons from '../subComponents/SocialIcons'
 import { Blogs } from '../data/BlogData';
 import BlogComponent from './BlogComponent'
 import AnchorComponent from '../subComponents/Anchor'
+import BigTitle from '../subComponents/BigTitle'
 
 
 
@@ -36,6 +37,9 @@ useEffect(() => {
                   })}
                 </Grid>
             </Center>
+
+            <BigTitle text="BLOG" top='5rem' right='5rem' />
+
         </Container>
     </MainContainer>
   )
